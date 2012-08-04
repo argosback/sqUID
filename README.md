@@ -69,6 +69,6 @@ the incrementor resets in order to keep all sqUIDs the same length.
 
 So in the nearly impossible case that your application executes this command 9,999,999 times in a millisecond, or somehow
 a bad JS implemtation allows concurrency to tack the same incrementor on to two sqUIDs that get generated at the exact
-same moment, then the randomizer kicks in.  By default it will generate a 25 character string composed of upper and lower case
-letters and all digits from 0 through 9.  Thus we only have to rely on the randomizer in extremely rare and almost impossible
-cases.
+same moment, then (and only then) do we have to put any faith in the randomizer.  By default it will generate a 25 character
+string composed of upper and lower case letters and all digits from 0 through 9.  Thus we only have to rely on the randomizer
+in extremely rare and almost impossible cases and, even then, it would only have to create a difference between two strings.
